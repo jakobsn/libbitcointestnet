@@ -1,0 +1,134 @@
+---1st Transaction---
+
+UNSIGNED
+
+libbitcointestnet$ bx tx-decode -c bx.cfg 01000000017ecad5f910adde3085ef9aad5ab83a9096c14cea79be8a6e6986f35b4bd4e9e20000000000ffffffff0188130000000000001976a914f795754b379c81cfe1b3ae7f1ddcbf77406d6b7288ac00000000
+transaction
+{
+    hash 3d48a92912a4100fe53769709399ea7daf6ba6c82330fae783b2aba3b19078c8
+    inputs
+    {
+        input
+        {
+            previous_output
+            {
+                hash e2e9d44b5bf386696e8abe79ea4cc196903ab85aad9aef8530dead10f9d5ca7e
+                index 0
+            }
+            script ""
+            sequence 4294967295
+        }
+    }
+    lock_time 0
+    outputs
+    {
+        output
+        {
+            address_hash f795754b379c81cfe1b3ae7f1ddcbf77406d6b72
+            script "dup hash160 [f795754b379c81cfe1b3ae7f1ddcbf77406d6b72] equalverify checksig"
+            value 5000
+        }
+    }
+    version 1
+}
+
+SIGNED
+
+libbitcointestnet$ bx tx-decode -c bx.cfg 01000000017ecad5f910adde3085ef9aad5ab83a9096c14cea79be8a6e6986f35b4bd4e9e2000000006b4830450221008914f76fb381cad9472f6977ef29fc8e74e630f8a0d6b9aa586738e53204d47c022012424479f4a384ddf184811b43a8879cd8c9384a6f8bdfb848e8d57d9072fad4012102d2ca678bbce5291535bcb3c189d67782cd8f253892e4b0c5793495ac7be6e536ffffffff0188130000000000001976a914f795754b379c81cfe1b3ae7f1ddcbf77406d6b7288ac00000000
+transaction
+{
+    hash a520f74a5de4fc31bb4b0e1f88669dcab964c64d29a771d3e63a05b39faa2b5f
+    inputs
+    {
+        input
+        {
+            address_hash 9e09cf2bab1945cafe8f808b28e7414ef07c000c
+            previous_output
+            {
+                hash e2e9d44b5bf386696e8abe79ea4cc196903ab85aad9aef8530dead10f9d5ca7e
+                index 0
+            }
+            script "[30450221008914f76fb381cad9472f6977ef29fc8e74e630f8a0d6b9aa586738e53204d47c022012424479f4a384ddf184811b43a8879cd8c9384a6f8bdfb848e8d57d9072fad401] [02d2ca678bbce5291535bcb3c189d67782cd8f253892e4b0c5793495ac7be6e536]"
+            sequence 4294967295
+        }
+    }
+    lock_time 0
+    outputs
+    {
+        output
+        {
+            address_hash f795754b379c81cfe1b3ae7f1ddcbf77406d6b72
+            script "dup hash160 [f795754b379c81cfe1b3ae7f1ddcbf77406d6b72] equalverify checksig"
+            value 5000
+        }
+    }
+    version 1
+}
+
+---2nd transaction---
+
+UNSIGNED
+
+ibbitcointestnet$ bx tx-decode -c bx.cfg 01000000015f2baa9fb3053ae6d371a7294dc664b9ca9d66881f0e4bbb31fce45d4af720a50000000000ffffffff01e8030000000000001976a9149e09cf2bab1945cafe8f808b28e7414ef07c000c88ac00000000
+transaction
+{
+    hash 728e816f8665b4d5235020c0a87799945dd39a36a7d3c8b5904c2709e7b863bd
+    inputs
+    {
+        input
+        {
+            previous_output
+            {
+                hash a520f74a5de4fc31bb4b0e1f88669dcab964c64d29a771d3e63a05b39faa2b5f
+                index 0
+            }
+            script ""
+            sequence 4294967295
+        }
+    }
+    lock_time 0
+    outputs
+    {
+        output
+        {
+            address_hash 9e09cf2bab1945cafe8f808b28e7414ef07c000c
+            script "dup hash160 [9e09cf2bab1945cafe8f808b28e7414ef07c000c] equalverify checksig"
+            value 1000
+        }
+    }
+    version 1
+}
+
+SIGNED
+
+libbitcointestnet$ bx tx-decode -c bx.cfg 01000000015f2baa9fb3053ae6d371a7294dc664b9ca9d66881f0e4bbb31fce45d4af720a5000000006b483045022100c3bfb50e485e6800679873063e1d788554e8ce323caebd22cfdc9ed7412accf802206986610ac5dfe58c97d536c894297f43dde01f3134cf81bda2482b0d085ef6ce01210234b3b13ea12e3cc7e24e70c63ccd3987fba3893658be5398494fb10fa6540c4dffffffff01e8030000000000001976a9149e09cf2bab1945cafe8f808b28e7414ef07c000c88ac00000000
+transaction
+{
+    hash 56ad72cfc7893b8940df6a8958c03bc8cf886afc555a60bd64bd780add423656
+    inputs
+    {
+        input
+        {
+            address_hash f795754b379c81cfe1b3ae7f1ddcbf77406d6b72
+            previous_output
+            {
+                hash a520f74a5de4fc31bb4b0e1f88669dcab964c64d29a771d3e63a05b39faa2b5f
+                index 0
+            }
+            script "[3045022100c3bfb50e485e6800679873063e1d788554e8ce323caebd22cfdc9ed7412accf802206986610ac5dfe58c97d536c894297f43dde01f3134cf81bda2482b0d085ef6ce01] [0234b3b13ea12e3cc7e24e70c63ccd3987fba3893658be5398494fb10fa6540c4d]"
+            sequence 4294967295
+        }
+    }
+    lock_time 0
+    outputs
+    {
+        output
+        {
+            address_hash 9e09cf2bab1945cafe8f808b28e7414ef07c000c
+            script "dup hash160 [9e09cf2bab1945cafe8f808b28e7414ef07c000c] equalverify checksig"
+            value 1000
+        }
+    }
+    version 1
+}
+
